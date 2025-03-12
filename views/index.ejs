@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Express App</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&family=Roboto+Condensed:wght@100..900&display=swap" rel="stylesheet">
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body>
+<h1 class="main_title">Random Recommended Anime</h1>
+  <div class="container">
+    <div class="card">
+      <img class="image" src="<%= posts.data.images.jpg.image_url %>" alt="Cover Image">
+      <div class="info">
+        <h1 class="title"><%= posts.data.title %></h1>
+        <h2 class="chapter">Chapters: <%= posts.data.chapters %></h2>
+        <h2 class="score">Score: <%= posts.data.score %></h2>
+        <h2 class="author">Author: <%= posts.data.authors[0].name %></h2>
+        <p class="desc"><%= posts.data.synopsis %></p>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

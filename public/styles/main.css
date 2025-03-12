@@ -1,0 +1,91 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+  }
+  
+  /* Container Styling */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ff7eb3, #75fff9);
+    padding: 20px;
+    perspective: 1000px; /* Creates a 3D effect */
+  }
+  
+  /* Card Styling */
+  .card {
+    max-width: 450px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transform-origin: center bottom;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  }
+  
+  /* Tilt and shadow effect on hover */
+  .card:hover {
+    transform: rotateX(10deg) translateY(-10px); /* Tilts and moves up */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Image Styling */
+  .image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  /* Title Styling */
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Subtitle Styling */
+  .chapter, .score, .author {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  /* Scrollable Description */
+  .desc {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+    text-align: justify;
+    
+    max-height: 100px; /* Fixed height */
+    overflow-y: auto;  /* Enable scrolling */
+    padding-right: 5px; /* Space for scrollbar */
+  }
+  
+  /* Custom Scrollbar */
+  .desc::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .desc::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
+  
+  .desc::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
